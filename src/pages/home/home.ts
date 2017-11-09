@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import {Component, Inject} from '@angular/core';
 import { NavController } from 'ionic-angular';
+import {EnvironmentVariables} from "../../environment/environment.token";
 
 @Component({
   selector: 'page-home',
@@ -7,8 +8,9 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
-
+  constructor(public navCtrl: NavController,
+              @Inject(EnvironmentVariables)public environment) {
+    console.debug(JSON.stringify(this.environment));
   }
 
 }
