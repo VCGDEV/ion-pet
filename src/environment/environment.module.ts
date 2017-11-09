@@ -11,6 +11,7 @@ declare const process:any;
  * este factory es el que hace la magia para nosotros
  * */
 export function environmentFactory() {
+  console.debug(JSON.stringify(process.env));
   return process.env.IONIC_ENV === 'prod' ? PROD : DEV;
 }
 
