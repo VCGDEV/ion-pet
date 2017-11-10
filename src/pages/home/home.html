@@ -21,4 +21,16 @@
   <p>
     ENV_NAME: {{environment.ENV_NAME}}
   </p>
+  <button *ngIf="session.userProfile" ion-button block color="facebook" (click)="facebookLogout()">Log out</button>
+  <ion-card *ngIf="session.userProfile">
+    <img [src]="session.userProfile.image" />
+    <ion-card-content>
+      <ion-card-title>
+        {{session.userProfile.name}}
+      </ion-card-title>
+      <p>
+        {{session.userProfile.email}}
+      </p>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

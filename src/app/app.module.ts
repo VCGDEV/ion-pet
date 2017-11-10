@@ -9,12 +9,16 @@ import { ListPage } from '../pages/list/list';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {EnviromentVariablesModule} from "../environment/environment.module";
+import {Facebook} from "@ionic-native/facebook";
+import {WelcomePage} from "../pages/welcome-page/welcome.page";
+import {SesionManagerService} from "../service/sesion.manager.service";
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    WelcomePage
   ],
   imports: [
     BrowserModule,
@@ -25,11 +29,14 @@ import {EnviromentVariablesModule} from "../environment/environment.module";
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    WelcomePage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    Facebook,
+    SesionManagerService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
