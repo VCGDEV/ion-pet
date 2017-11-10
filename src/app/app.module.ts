@@ -11,14 +11,18 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import {EnviromentVariablesModule} from "../environment/environment.module";
 import {Facebook} from "@ionic-native/facebook";
 import {WelcomePage} from "../pages/welcome-page/welcome.page";
-import {SesionManagerService} from "../service/sesion.manager.service";
+import {SessionManagerService} from "../service/session.manager.service";
+import {Login} from "../pages/login/login";
+import {ForgetPassword} from "../pages/forget-password/forget.password";
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     ListPage,
-    WelcomePage
+    WelcomePage,
+    Login,
+    ForgetPassword
   ],
   imports: [
     BrowserModule,
@@ -30,13 +34,15 @@ import {SesionManagerService} from "../service/sesion.manager.service";
     MyApp,
     HomePage,
     ListPage,
-    WelcomePage
+    WelcomePage,
+    Login,
+    ForgetPassword
   ],
   providers: [
     StatusBar,
     SplashScreen,
     Facebook,
-    SesionManagerService,
+    SessionManagerService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

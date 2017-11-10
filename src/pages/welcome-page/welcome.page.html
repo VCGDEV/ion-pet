@@ -1,5 +1,21 @@
-<ion-content>
-  <h1>Welcome to ION-PET</h1>
-  <p>Log into our app</p>
-  <button ion-button block color="facebook" (click)="facebookLogin()">Facebook</button>
+<ion-content no-padding>
+  <ion-grid no-padding class="container_homescreen">
+    <ion-row>
+      <ion-col col-12>
+        <ion-img src="assets/imgs/code.gif" width="100%" height="100%"></ion-img>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <h4 text-center class="first_title">Ion Pet</h4>
+      </ion-col>
+      <ion-col col-10 offset-1>
+        <p no-margin text-center></p>
+      </ion-col>
+      <ion-col text-center col-12 class="login_register">
+        <button ion-button outline color="primary" (click)="goToLogin()" >Iniciar Sersión</button>
+        <button ion-button color="primary">Registrarme</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

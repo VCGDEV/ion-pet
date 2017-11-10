@@ -6,7 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import {Facebook} from "@ionic-native/facebook";
-import {SesionManagerService} from "../service/sesion.manager.service";
+import {SessionManagerService} from "../service/session.manager.service";
 import {WelcomePage} from "../pages/welcome-page/welcome.page";
 
 @Component({
@@ -22,7 +22,7 @@ export class MyApp {
   constructor(public platform: Platform, public statusBar: StatusBar,
               public fb:Facebook,
               public splashScreen: SplashScreen,
-              public session:SesionManagerService) {
+              public session:SessionManagerService) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
