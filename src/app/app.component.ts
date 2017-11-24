@@ -17,7 +17,7 @@ export class MyApp {
 
   rootPage: any;
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{title: string, component: any,icon:string}>;
 
   constructor(public platform: Platform, public statusBar: StatusBar,
               public fb:Facebook,
@@ -27,8 +27,11 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
+      { title: 'Inicio', component: HomePage,icon:'home' },
+      { title: 'Mascotas', component: ListPage,icon:'paw' },
+      { title: 'Agenda', component: ListPage,icon:'calendar'},
+      { title: 'Suministros', component: ListPage,icon:'basket' },
+      { title: 'Configuración', component: ListPage,icon:'cog' }
     ];
 
   }

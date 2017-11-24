@@ -44,6 +44,6 @@ export class Login{
   }
 
   login(){
-    //TODO add login functonallity
+    this.navCtrl.push(HomePage);
   }
 }
