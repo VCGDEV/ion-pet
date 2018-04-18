@@ -1,0 +1,10 @@
+page-welcome {
+  ion-img.img-loaded img {height: 100%;width:100%}
+  .container_homescreen{height: 100%;}
+  .container_homescreen ion-row:first-child{height: 70%;}
+  .container_homescreen ion-row:last-child{height: 30%;}
+  .container_homescreen ion-row:last-child{background: #eef4e5;}
+  .container_homescreen .first_title{color: #f7833f;margin-bottom: 5px;font-weight: 400;}
+  .container_homescreen p{line-height: 1.5;font-size: 14px;}
+  .container_homescreen .login_register .button-md,.container_homescreen .login_register .button-ios,.container_homescreen .login_register .button-wp{width:40%;padding: 22px 0;border-radius: 5px;}
+}

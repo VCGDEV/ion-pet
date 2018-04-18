@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Acceso</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content no-padding class="container_page">
+  <ion-grid class="container_login">
+    <ion-row>
+      <ion-col text-center col-12 class="login_with">
+        <button ion-button color="twitter">Twitter</button>
+        <button ion-button color="facebook" (click)="facebookLogin()">Facebook</button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col class="form_login" col-12>
+        <ion-list>
+          <ion-item>
+            <ion-label floating>Correo</ion-label>
+            <ion-input class="login-input"  #username="ngModel" [(ngModel)]="request.username"
+                       name="username" id="username" type="text" value=""></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>Contraseña</ion-label>
+            <ion-input class="login-input" #pasword="ngModel" [(ngModel)]="request.password"
+                       name="password" id="password" type="password" value=""></ion-input>
+          </ion-item>
+        </ion-list>
+
+        <div padding>
+          <button ion-button color="taxi" block (click)="login()">Iniciar Sesión</button>
+        </div>
+      </ion-col>
+      <ion-col text-center><button class="forgetpassword" ion-button clear full (click)="recoverPassword()">Olvidé mi contraseña</button></ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

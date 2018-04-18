@@ -1,6 +1,6 @@
 {
   "name": "ion-pet",
-  "app_id": "",
+  "app_id": "c08cdf92",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
